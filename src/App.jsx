@@ -1,27 +1,27 @@
+import { useState } from 'react';
 import './App.css';
+import Card from './components/card'
+import Cart from './components/cart'
 
 function App() {
+
+  let [items,setItems] = useState([])
+
+  function useSetItems(name){
+    setItems([...items,{prouct:name}])
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <Card productName='Jacket' addItemInArray={useSetItems}></Card>
+      <Cart>
+        {
+          items.map(pro => {
+            <li>{pro.product}</li>
+            console.log(pro.product)
+          })
+        }
+      </Cart>
     </div>
   );
 }

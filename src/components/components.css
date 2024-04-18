@@ -1,0 +1,31 @@
+
+body{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: antiquewhite;
+}
+.card{
+    margin: 2rem;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 11px;
+    border: 1px solid white;
+    max-width: 25vw;
+    min-height: 25vh;
+    transition: 0.4s;
+}
+
+.card:hover{
+    scale: 1.2;
+    background-color: rgba(225, 225, 225, 0.8);
+}
+
+.cart{
+    background-color: rgba(255, 255, 255, 0.55);
+    min-width: fit-content;
+    max-width: 30vw;
+    min-height: 40vh;
+    margin: 3.5rem;
+    padding: 2.5rem;
+    border-radius: 11px;
+    color: blueviolet;
+}
